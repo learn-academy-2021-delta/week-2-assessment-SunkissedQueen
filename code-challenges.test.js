@@ -154,6 +154,15 @@ var vowelTester3 = "challenges"
        }
   }
 
+  // I tried but my brain is mashed potatoes trying to keep up with the verbiage and placement. I am going with vintage and learn the ways of refactor. Sorry I really tried. I am not sure how to clean up my code block.
+  //const heyVowel = (h) => {
+  //      let vwArray = h.split("");
+  // let vwFind = vwArray.map(value => {
+  //     if (value == "a" || value == "e" || value == "i" || value == "o" || value == "u") {
+  // return value})
+  //   return vwFind.indexOf(value)
+  //     }
+
 console.log(heyVowel(vowelTester1))
 console.log(heyVowel(vowelTester2))
 console.log(heyVowel(vowelTester3))
