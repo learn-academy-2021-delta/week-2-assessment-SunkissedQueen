@@ -119,15 +119,40 @@ var vowelTester3 = "challenges"
 
 // b) Create the function that makes the test pass.
   //Declare the function as heyVowel
+  // This was a brainstorm that felt like a tsunami on my brain cells. I knew I wanted to split the letters. Then I had to searched for a way to approach the array. I used the search with Regex. I tried the char of and index methods which made me forget how to spell my name. I was not sure how to isolate the first occurrence of a vowel using this code so I started researching other approaches that I could understand with my current knowledge.
+  //const heyVowel = (h) => {
+  //   var vowel = h.split("");
+  //   //return an array with the first letter in each element capitalized
+  //   return vowel.indexOf("a")
+  //   //condition that will allow the function to determine if a character is a vowel in a string
+  //   if (vowel == "a" || vowel == "e" || vowel == "i" || vowel == "o" || vowel == "u"){
+  //     return string.indexOf(h)
+  //   }
+  // }
+  //After many videos and trail/error, I decided to use some vintage tactics. I am sure that the approach can be condensed, but I needed a win after all those hours. I will research and consolidate this function that received a MINTY GREEN banner. I think I can incorporate the map method for iteration. Now that I look at it. I might be able to merge some aspects of this function with the previous one. Telling myself to chill and complete the rest of the assessment. How do you make yourself release a project?
+  //Here's the pseudocode.
+  //Declare the heyVowel function that will take in a string parameter
   const heyVowel = (h) => {
-    var vowel = h.split("");
-    //return an array with the first letter in each element capitalized
-    return vowel.indexOf("a")
-    //condition that will allow the function to determine if a character is a vowel in a string
-
-
+    //Need to ensure the string would be in lowercase so I wouldn't receive error messages from capital letters.
+    let str = h;
+    str = str.toLowerCase();
+    //need to iterate across string
+    for(var i = 0; i<str.length; i++) {
+      //declare the variable that will be compare to the vowel
+  	   let chr = str.charAt(i);
+       //use conditional statements with Boolean to test if character is a vowel
+  	    if(chr == "a" || chr == "e" || chr == "i" || chr == "o" || chr  == "u")
+        //need to stop function at its first occurrence of a vowel. Time to research how to stop a function. Taking a break is a wonderous thing.
+         {break};
+    }
+    //now what to say at different conditions. If the search came back before searching the whole string, then a vowel was found and the index will be displayed.
+    if(i<str.length) {
+  	   return  (i)}
+       //if not, then catchall will display the lack of a vowel in the word.
+       else {
+         return 'Oh my! You seemed to have lost your vowels.'
+       }
   }
-
 
 console.log(heyVowel(vowelTester1))
 console.log(heyVowel(vowelTester2))
